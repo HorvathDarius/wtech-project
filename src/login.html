@@ -8,7 +8,9 @@
   </head>
   <body class="w-screen h-screen flex flex-col">
     <header>
-      <nav class="bg-[#E3DDDD] h-20 flex items-center font-bold px-4 sm:px-10 justify-between">
+      <nav
+        class="bg-[#E3DDDD] h-20 flex items-center font-bold px-4 sm:px-10 justify-between"
+      >
         <div class="flex gap-4 sm:gap-6 items-center">
           <div class="w-20 h-20">
             <img src="../public/Logo.png" alt="StringShop logo" />
@@ -64,17 +66,32 @@
             <img src="../public/Logo.png" alt="StringShop logo" />
           </div>
           <div class="flex flex-col">
-            <h1 class="sm:bg-red-200 md:bg-blue-300 lg:bg-yellow-300 w-full h-10 text-center">Welcome to StringShop</h1>
+            <h1 class="w-full h-10 text-center">Welcome to StringShop</h1>
             <h2 class="font-bold">SIGN IN WITH YOUR EMAIL ADDRESS</h2>
           </div>
           <form action="post" class="flex flex-col gap-8">
             <div class="flex flex-col gap-2">
               <label for="email">E-mail</label>
-              <input id="email" type="text" class="w-80 h-10 bg-gray-200 rounded-sm" required />
+              <input
+                id="email"
+                type="text"
+                class="w-80 h-10 bg-gray-200 rounded-sm"
+                required
+              />
               <label for="password">Password</label>
-              <input id="password" type="password" class="w-80 h-10 bg-gray-200 rounded-sm" required />
+              <input
+                id="password"
+                type="password"
+                class="w-80 h-10 bg-gray-200 rounded-sm"
+                required
+              />
             </div>
-            <button type="submit" class="bg-red-500 w-80 h-10 rounded-md text-white cursor-pointer">Sign in</button>
+            <button
+              type="submit"
+              class="bg-red-500 w-80 h-10 rounded-md text-white cursor-pointer"
+            >
+              Sign in
+            </button>
           </form>
           <p>
             Don't have an account?
@@ -85,7 +102,9 @@
         </section>
       </section>
     </main>
-    <footer class="bg-black w-full h-10 bottom-0 flex items-center justify-center">
+    <footer
+      class="bg-black w-full h-10 bottom-0 flex items-center justify-center"
+    >
       <p class="text-white">Made by Peter & Darius</p>
     </footer>
   </body>

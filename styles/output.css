@@ -6,10 +6,19 @@
       "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
+    --color-red-200: oklch(0.885 0.062 18.334);
     --color-red-500: oklch(0.637 0.237 25.331);
+    --color-red-600: oklch(0.577 0.245 27.325);
+    --color-orange-200: oklch(0.901 0.076 70.697);
+    --color-orange-500: oklch(0.705 0.213 47.604);
+    --color-orange-600: oklch(0.646 0.222 41.116);
     --color-green-200: oklch(0.925 0.084 155.995);
-    --color-blue-200: oklch(0.882 0.059 254.128);
+    --color-green-300: oklch(0.871 0.15 154.449);
+    --color-green-600: oklch(0.627 0.194 149.214);
+    --color-teal-500: oklch(0.704 0.14 182.503);
     --color-gray-200: oklch(0.928 0.006 264.531);
+    --color-stone-200: oklch(0.923 0.003 48.717);
+    --color-stone-400: oklch(0.709 0.01 56.259);
     --color-black: #000;
     --color-white: #fff;
     --spacing: 0.25rem;
@@ -18,6 +27,8 @@
     --font-weight-bold: 700;
     --radius-sm: 0.25rem;
     --radius-md: 0.375rem;
+    --radius-lg: 0.5rem;
+    --radius-2xl: 1rem;
     --default-font-family: var(--font-sans);
     --default-font-feature-settings: var(--font-sans--font-feature-settings);
     --default-font-variation-settings: var(
@@ -30,6 +41,8 @@
     --default-mono-font-variation-settings: var(
       --font-mono--font-variation-settings
     );
+    --color-primary: #DC443C;
+    --color-outline: #E3DDDD;
   }
 }
 @layer base {
@@ -174,14 +187,35 @@
   }
 }
 @layer utilities {
+  .pointer-events-auto {
+    pointer-events: auto;
+  }
+  .absolute {
+    position: absolute;
+  }
+  .relative {
+    position: relative;
+  }
   .bottom-0 {
     bottom: calc(var(--spacing) * 0);
+  }
+  .left-10 {
+    left: calc(var(--spacing) * 10);
   }
   .m-4 {
     margin: calc(var(--spacing) * 4);
   }
+  .m-8 {
+    margin: calc(var(--spacing) * 8);
+  }
+  .mt-0 {
+    margin-top: calc(var(--spacing) * 0);
+  }
   .mt-2 {
     margin-top: calc(var(--spacing) * 2);
+  }
+  .mb-4 {
+    margin-bottom: calc(var(--spacing) * 4);
   }
   .flex {
     display: flex;
@@ -195,6 +229,12 @@
   }
   .h-10 {
     height: calc(var(--spacing) * 10);
+  }
+  .h-11 {
+    height: calc(var(--spacing) * 11);
+  }
+  .h-12 {
+    height: calc(var(--spacing) * 12);
   }
   .h-20 {
     height: calc(var(--spacing) * 20);
@@ -220,20 +260,17 @@
   .w-80 {
     width: calc(var(--spacing) * 80);
   }
-  .w-\[40\%\] {
-    width: 40%;
-  }
-  .w-\[60\%\] {
-    width: 60%;
-  }
   .w-full {
     width: 100%;
   }
   .w-screen {
     width: 100vw;
   }
-  .flex-1 {
-    flex: 1;
+  .table-auto {
+    table-layout: auto;
+  }
+  .table-fixed {
+    table-layout: fixed;
   }
   .cursor-pointer {
     cursor: pointer;
@@ -271,15 +308,38 @@
   .gap-8 {
     gap: calc(var(--spacing) * 8);
   }
+  .rounded {
+    border-radius: 0.25rem;
+  }
+  .rounded-2xl {
+    border-radius: var(--radius-2xl);
+  }
+  .rounded-lg {
+    border-radius: var(--radius-lg);
+  }
   .rounded-md {
     border-radius: var(--radius-md);
   }
   .rounded-sm {
     border-radius: var(--radius-sm);
   }
+  .rounded-t {
+    border-top-left-radius: 0.25rem;
+    border-top-right-radius: 0.25rem;
+  }
+  .rounded-t-lg {
+    border-top-left-radius: var(--radius-lg);
+    border-top-right-radius: var(--radius-lg);
+  }
   .rounded-t-md {
     border-top-left-radius: var(--radius-md);
     border-top-right-radius: var(--radius-md);
+  }
+  .rounded-tl-lg {
+    border-top-left-radius: var(--radius-lg);
+  }
+  .rounded-tr-lg {
+    border-top-right-radius: var(--radius-lg);
   }
   .border {
     border-style: var(--tw-border-style);
@@ -292,6 +352,21 @@
   .border-\[\#E3DDDD\] {
     border-color: #E3DDDD;
   }
+  .border-green-600 {
+    border-color: var(--color-green-600);
+  }
+  .border-orange-600 {
+    border-color: var(--color-orange-600);
+  }
+  .border-outline {
+    border-color: var(--color-outline);
+  }
+  .border-red-600 {
+    border-color: var(--color-red-600);
+  }
+  .border-stone-400 {
+    border-color: var(--color-stone-400);
+  }
   .bg-\[\#DC443C\] {
     background-color: #DC443C;
   }
@@ -301,23 +376,47 @@
   .bg-black {
     background-color: var(--color-black);
   }
-  .bg-blue-200 {
-    background-color: var(--color-blue-200);
-  }
   .bg-gray-200 {
     background-color: var(--color-gray-200);
   }
   .bg-green-200 {
     background-color: var(--color-green-200);
   }
+  .bg-green-300 {
+    background-color: var(--color-green-300);
+  }
+  .bg-orange-200 {
+    background-color: var(--color-orange-200);
+  }
+  .bg-outline {
+    background-color: var(--color-outline);
+  }
+  .bg-primary {
+    background-color: var(--color-primary);
+  }
+  .bg-red-200 {
+    background-color: var(--color-red-200);
+  }
   .bg-red-500 {
     background-color: var(--color-red-500);
+  }
+  .bg-stone-200 {
+    background-color: var(--color-stone-200);
+  }
+  .bg-teal-500 {
+    background-color: var(--color-teal-500);
   }
   .p-2 {
     padding: calc(var(--spacing) * 2);
   }
   .p-4 {
     padding: calc(var(--spacing) * 4);
+  }
+  .p-6 {
+    padding: calc(var(--spacing) * 6);
+  }
+  .px-2 {
+    padding-inline: calc(var(--spacing) * 2);
   }
   .px-4 {
     padding-inline: calc(var(--spacing) * 4);
@@ -327,6 +426,12 @@
   }
   .px-10 {
     padding-inline: calc(var(--spacing) * 10);
+  }
+  .py-1 {
+    padding-block: calc(var(--spacing) * 1);
+  }
+  .py-2 {
+    padding-block: calc(var(--spacing) * 2);
   }
   .pt-4 {
     padding-top: calc(var(--spacing) * 4);
@@ -348,8 +453,20 @@
   .text-\[\#DC443C\] {
     color: #DC443C;
   }
+  .text-green-600 {
+    color: var(--color-green-600);
+  }
+  .text-orange-500 {
+    color: var(--color-orange-500);
+  }
+  .text-primary {
+    color: var(--color-primary);
+  }
   .text-red-500 {
     color: var(--color-red-500);
+  }
+  .text-red-600 {
+    color: var(--color-red-600);
   }
   .text-white {
     color: var(--color-white);
@@ -432,6 +549,11 @@
   .lg\:col-span-3 {
     @media (width >= 64rem) {
       grid-column: span 3 / span 3;
+    }
+  }
+  .lg\:col-span-4 {
+    @media (width >= 64rem) {
+      grid-column: span 4 / span 4;
     }
   }
   .lg\:col-start-2 {

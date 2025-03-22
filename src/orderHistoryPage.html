@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../styles/output.css" />
+    <title>Document</title>
+  </head>
+  <body class="w-screen h-screen flex flex-col">
+    <header>
+      <nav class="bg-[#E3DDDD] h-20 flex items-center font-bold px-4 sm:px-10 justify-between">
+        <div class="flex gap-4 sm:gap-6 items-center">
+          <div class="w-20 h-20">
+            <img src="../public/Logo.png" alt="StringShop logo" />
+          </div>
+          <div class="flex gap-4 sm:gap-10">
+            <a href="">Guitars</a>
+            <a href="">Basses</a>
+            <a href="">Amps</a>
+          </div>
+        </div>
+
+        <div class="flex gap-4 sm:gap-10">
+          <a href="">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="size-6"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z"
+              />
+            </svg>
+          </a>
+
+          <a href="">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="size-6"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z"
+              />
+            </svg>
+          </a>
+        </div>
+      </nav>
+    </header>
+    <main class="w-full h-full p-4">
+      <article class="w-full h-full flex flex-col justify-center">
+        <div class="grid w-full h-full grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 grid-rows-2 gap-4">
+          <div
+            class="sm:row-span-1 sm:col-span-4 sm:row-start-1 sm:col-start-1 lg:row-span-1 lg:col-span-1 bg-[#E3DDDD] rounded-md"
+          >
+            <article class="w-full h-full flex flex-col justify-around items-center font-bold">
+              <a href="">Account</a>
+              <a href="">Order History</a>
+              <button class="bg-[#DC443C] text-white h-10 w-40 px-10 rounded-md">Log Out</button>
+            </article>
+          </div>
+          <div
+            class="sm:col-span-2 sm:row-span-2 sm:row-start-2 sm:col-start-1 lg:row-span-2 lg:row-start-1 lg:col-start-2 lg:col-span-3 rounded-md border-1 border-[#E3DDDD] flex flex-col"
+          >
+            <p class="w-full text-xl px-8 pt-4 pb-2 font-bold text-[#DC443C]">Order History</p>
+            <div class="h-full center border border-[#E3DDDD] rounded-md m-4 mt-2">
+              <div class="bg-[#DC443C] w-full h-10 rounded-t-md flex justify-around items-center text-white">
+                <span>Order #</span>
+                <span>Order Summary</span>
+                <span>Order Date</span>
+                <span>Order Status</span>
+                <span>Action</span>
+              </div>
+              Here goes the order history
+            </div>
+          </div>
+        </div>
+      </article>
+    </main>
+    <footer class="bg-black w-full h-10 bottom-0 flex items-center justify-center">
+      <p class="text-white">Made by Peter & Darius</p>
+    </footer>
+  </body>
+</html>

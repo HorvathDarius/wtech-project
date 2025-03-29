@@ -6,10 +6,12 @@
     <link rel="stylesheet" href="../styles/output.css" />
     <title>Document</title>
   </head>
-  <body class="w-screen h-screen grid grid-rows-[auto_1fr_auto]">
+  <body class="w-screen h-screen flex flex-col">
     <header>
-      <nav class="bg-[#E3DDDD] h-20 flex items-center font-bold px-4 sm:px-10 justify-between">
-        <div class="flex sm:gap-6 items-center">
+      <nav
+        class="bg-outline h-20 flex items-center font-bold px-4 sm:px-10 justify-between"
+      >
+        <div class="flex gap-4 sm:gap-6 items-center">
           <div class="w-20 h-20">
             <img src="../public/Logo.png" alt="StringShop logo" />
           </div>
@@ -57,31 +59,281 @@
         </div>
       </nav>
     </header>
-    <main class="container mx-auto px-4 grid grid-cols-1 gap-6 mt-8 grid-rows-[auto_1fr_auto] pb-14">
-      <h1 class="col-span-1 text-4xl text-left">Your Shopping Basket</h1>
-      <section class="grid grid-cols-1 p-4">
-        <div class="border-2 border-red-500 grid grid-rows-[auto_auto] rounded-lg place-items-center">
-          <p class="text-4xl font-bold text-center max-w-xs sm:max-w-md md:max-w-lg lg:max-w-3xl">
-            Your shopping basket is empty for now :(
-          </p>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke-width="1.5"
-            stroke="red"
-            class="lg:size-150 md:size-100 rotate-180"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z"
-            />
-          </svg>
+    <main class="w-full h-full overflow-scroll">
+      <p class="w-full text-2xl px-8 py-2 mt-8 font-bold text-black">
+        Your Shopping Basket
+      </p>
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 px-4">
+  
+        <!-- Table of products -->
+        <div class="lg:col-span-1 col-span-1 w-full">
+          <div class="overflow-x-auto">
+            <table class="w-full table-auto border-collapse">
+              <tbody>
+                <!-- Product in the basket -->
+                <tr class="h-28">
+                  <td class="p-1">
+                    <div class="grid grid-cols-[1fr_4fr_1fr] border rounded shadow overflow-hidden w-full h-28">
+                      <div class="col-start-1 row-span-3 col-span-1 relative w-28 h-28">
+                        <img src="..\assets\amps\ampPlaceholder.webp" alt="thumb1" class="object-cover" />
+                      </div>
+                      <div class="p-4 col-start-2 col-span-1">
+                        <h3 class="font-bold text-l">amp placeholder</h3>
+                        <p class="text-sm">Pitch black</p>
+                        <p class="text-sm font-bold text-green-700">Available</p>
+                        <button class="">🗑️</button>
+                      </div>
+                      <div class="gap-1 text-center justify-around content-around bg-center">
+                        <input type="number" value="1" min="1" max="100" step="1" class="border rounded p-1 mx-auto" />
+                        <p class="font-bold text-3xl text-primary">600€</p>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                <!-- Product in the basket -->
+                <tr class="h-28">
+                  <td class="p-1">
+                    <div class="grid grid-cols-[1fr_4fr_1fr] border rounded shadow overflow-hidden w-full h-28">
+                      <div class="col-start-1 row-span-3 col-span-1 relative w-28 h-28">
+                        <img src="..\assets\basses\bassPlaceholder.webp" alt="thumb1" class="object-cover" />
+                      </div>
+                      <div class="p-4 col-start-2 col-span-1">
+                        <h3 class="font-bold text-l">bass placeholder</h3>
+                        <p class="text-sm">Pitch black</p>
+                        <p class="text-sm font-bold text-green-700">Available</p>
+                        <button class="">🗑️</button>
+                      </div>
+                      <div class="gap-1 text-center justify-around content-around bg-center">
+                        <input type="number" value="1" min="1" max="100" step="1" class="border rounded p-1 mx-auto" />
+                        <p class="font-bold text-3xl text-primary">450€</p>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                <!-- Product in the basket -->
+                <tr class="h-28">
+                  <td class="p-1">
+                    <div class="grid grid-cols-[1fr_4fr_1fr] border rounded shadow overflow-hidden w-full h-28">
+                      <div class="col-start-1 row-span-3 col-span-1 relative w-28 h-28">
+                        <img src="..\assets\guitars\guitar_placeholder.webp" alt="thumb1" class="object-cover" />
+                      </div>
+                      <div class="p-4 col-start-2 col-span-1">
+                        <h3 class="font-bold text-l">guitar placeholder</h3>
+                        <p class="text-sm">Crimson red</p>
+                        <p class="text-sm font-bold text-green-700">Available</p>
+                        <button class="">🗑️</button>
+                      </div>
+                      <div class="gap-1 text-center justify-around content-around bg-center">
+                        <input type="number" value="1" min="1" max="100" step="1" class="border rounded p-1 mx-auto" />
+                        <p class="font-bold text-3xl text-primary">786€</p>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                <!-- Product in the basket -->
+                <tr class="h-28">
+                  <td class="p-1">
+                    <div class="grid grid-cols-[1fr_4fr_1fr] border rounded shadow overflow-hidden w-full h-28">
+                      <div class="col-start-1 row-span-3 col-span-1 relative w-28 h-28">
+                        <img src="..\assets\guitars\lava.webp" alt="thumb1" class="object-cover" />
+                      </div>
+                      <div class="p-4 col-start-2 col-span-1">
+                        <h3 class="font-bold text-l">Lava guitar</h3>
+                        <p class="text-sm">Crimson red</p>
+                        <p class="text-sm font-bold text-green-700">Available</p>
+                        <button class="">🗑️</button>
+                      </div>
+                      <div class="gap-1 text-center justify-around content-around bg-center">
+                        <input type="number" value="1" min="1" max="100" step="1" class="border rounded p-1 mx-auto" />
+                        <p class="font-bold text-3xl text-primary">1000€</p>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </div>
-      </section>
+      
+        <!-- Right side of the screen -->
+        <div class="lg:col-span-1 col-span-1 w-full">
+          <div class="grid grid-rows-2 gap-4 place-items-center">
+            
+            <!-- Order total -->
+            <div class="bg-outline rounded-md p-4 w-full max-w-md lg:w-full lg:max-w-md">
+              <article class="grid gap-2 h-40 place-items-center font-bold text-center">
+                <a href="#" class="text-primary text-3xl">Total: 2836€</a>
+                <button class="bg-primary text-white h-10 w-44 rounded-md">To Checkout</button>
+              </article>
+            </div>
+      
+            <!-- Shipping info -->
+            <div class="border-2 border-primary rounded-md p-4 font-italic w-full max-w-md lg:w-full lg:max-w-md">
+              <article class="grid place-items-center h-40 text-center">
+                <a href="#" class="text-black text-xl">
+                  All items in your shopping basket are in stock and can be shipped immediately.
+                </a>
+              </article>
+            </div>
+      
+          </div>
+        </div>
+      
+      </div>
+        <!-- Full-width description -->
+        <div class="col-span-full px-4 lg:px-24 border-primary border-t pt-8 mt-6">
+            <!-- Shipping costs -->
+            <div class="border-2 border-primary rounded-md p-4 font-italic">
+                <article class="grid place-items-center h-40 w-full text-center">
+                    <a href="#" class="text-black text-xl">
+                    All items in your shopping basket are in stock and can be shipped immediately.
+                    </a>
+                </article>
+                </div>
+        </div>
+      </div>
+      <!-- Popular products -->
+      <div class="w-full  py-5 px-4">
+        <h2 class="text-black font-bold text-center text-3xl">Recomended</h2>
+      </div>
+
+      <div
+        class="container mx-auto py-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 2xl:grid-cols-6 gap-y-10 place-items-center"
+      >
+        <!-- Single Product Card -->
+        <div
+          class="block border rounded shadow overflow-hidden w-60 col-span-1"
+        >
+          <div class="relative h-64 flex items-center justify-center">
+            <img
+              src="..\assets\guitars\guitar_placeholder.webp"
+              alt="thumb1"
+              class="object-cover"
+            />
+          </div>
+          <div class="p-4 col-span-1">
+            <h3 class="font-bold text-l">Product name</h3>
+            <p class="text-sm">599 €</p>
+            <p class="text-sm text-gray-600">3 colors</p>
+            <div class="flex justify-end mt-2">
+              <button class="text-xl">🛒</button>
+            </div>
+          </div>
+        </div>
+        <!-- Single Product Card -->
+        <div
+          class="hidden sm:block border rounded shadow overflow-hidden w-60 col-span-1"
+        >
+          <div class="relative h-64 flex items-center justify-center">
+            <img
+              src="..\assets\guitars\guitar_placeholder.webp"
+              alt="thumb1"
+              class="object-cover"
+            />
+          </div>
+          <div class="p-4 col-span-1">
+            <h3 class="font-bold text-l">Product name</h3>
+            <p class="text-sm">599 €</p>
+            <p class="text-sm text-gray-600">3 colors</p>
+            <div class="flex justify-end mt-2">
+              <button class="text-xl">🛒</button>
+            </div>
+          </div>
+        </div>
+        <!-- Single Product Card -->
+        <div
+          class="hidden md:block border rounded shadow overflow-hidden w-60 col-span-1"
+        >
+          <div class="relative h-64 flex items-center justify-center">
+            <img
+              src="..\assets\guitars\guitar_placeholder.webp"
+              alt="thumb1"
+              class="object-cover"
+            />
+          </div>
+          <div class="p-4 col-span-1">
+            <h3 class="font-bold text-l">Product name</h3>
+            <p class="text-sm">599 €</p>
+            <p class="text-sm text-gray-600">3 colors</p>
+            <div class="flex justify-end mt-2">
+              <button class="text-xl">🛒</button>
+            </div>
+          </div>
+        </div>
+        <!-- Single Product Card -->
+        <div
+          class="hidden lg:block border rounded shadow overflow-hidden w-60 col-span-1"
+        >
+          <div class="relative h-64 flex items-center justify-center">
+            <img
+              src="..\assets\guitars\guitar_placeholder.webp"
+              alt="thumb1"
+              class="object-cover"
+            />
+          </div>
+          <div class="p-4 col-span-1">
+            <h3 class="font-bold text-l">Product name</h3>
+            <p class="text-sm">599 €</p>
+            <p class="text-sm text-gray-600">3 colors</p>
+            <div class="flex justify-end mt-2">
+              <button class="text-xl">🛒</button>
+            </div>
+          </div>
+        </div>
+        <!-- Single Product Card -->
+        <div
+          class="hidden 2xl:block border rounded shadow overflow-hidden w-60 col-span-1"
+        >
+          <div class="relative h-64 flex items-center justify-center">
+            <img
+              src="..\assets\guitars\guitar_placeholder.webp"
+              alt="thumb1"
+              class="object-cover"
+            />
+          </div>
+          <div class="p-4 col-span-1">
+            <h3 class="font-bold text-l">Product name</h3>
+            <p class="text-sm">599 €</p>
+            <p class="text-sm text-gray-600">3 colors</p>
+            <div class="flex justify-end mt-2">
+              <button class="text-xl">🛒</button>
+            </div>
+          </div>
+        </div>
+        <!-- Single Product Card -->
+        <div
+          class="hidden 2xl:block border rounded shadow overflow-hidden w-60 col-span-1"
+        >
+          <div class="relative h-64 flex items-center justify-center">
+            <img
+              src="..\assets\guitars\guitar_placeholder.webp"
+              alt="thumb1"
+              class="object-cover"
+            />
+          </div>
+          <div class="p-4 col-span-1">
+            <h3 class="font-bold text-l">Product name</h3>
+            <p class="text-sm">599 €</p>
+            <p class="text-sm text-gray-600">3 colors</p>
+            <div class="flex justify-end mt-2">
+              <button class="text-xl">🛒</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- View All button -->
+        <div class="col-span-full flex justify-center mb-4">
+          <button
+            class="bg-red-500 hover:bg-red-600 text-white text-sm md:text-lg md:px-6 px-4 py-2 rounded-md"
+          >
+            View All
+          </button>
+        </div>
+      </div>
     </main>
-    <footer class="bg-black w-full h-10 fixed bottom-0 flex items-center justify-center">
+    <footer
+      class="bg-black w-full h-10 fixed bottom-0 flex items-center justify-center"
+    >
       <p class="text-white">Made by Peter & Darius</p>
     </footer>
   </body>

@@ -8,9 +8,7 @@
   </head>
   <body class="w-screen h-screen grid grid-rows-[auto_1fr_auto]">
     <header>
-      <nav
-        class="bg-[#E3DDDD] h-20 flex items-center font-bold px-4 sm:px-10 justify-between"
-      >
+      <nav class="bg-outline h-20 flex items-center font-bold px-4 sm:px-10 justify-between">
         <div class="flex gap-4 sm:gap-6 items-center">
           <div class="w-20 h-20">
             <img src="../public/Logo.png" alt="StringShop logo" />
@@ -59,9 +57,7 @@
         </div>
       </nav>
     </header>
-    <main
-      class="container mx-auto px-4 grid grid-cols-1 md:grid-cols-[2fr_1fr] gap-x-12 mt-8 md:gap-x-5"
-    >
+    <main class="container mx-auto px-4 grid grid-cols-1 md:grid-cols-[2fr_1fr] gap-x-12 mt-8 md:gap-x-5 pb-14">
       <!-- Images section -->
       <div class="grid grid-cols-5 grid-rows-4 mb-5 gap-2">
         <!-- Thumbnails -->
@@ -145,48 +141,27 @@
 
         <!-- Quantity & Button -->
         <div class="flex items-center space-x-4">
-          <input
-            type="number"
-            value="1"
-            min="1"
-            max="100"
-            step="1"
-            class="border rounded p-1"
-          />
-          <button
-            class="bg-red-500 hover:bg-red-600 text-white px-4 py-2 rounded"
-          >
-            Add to Cart
-          </button>
+          <input type="number" value="1" min="1" max="100" step="1" class="border rounded p-1" />
+          <button class="bg-red-500 hover:bg-red-600 text-white px-4 py-2 rounded">Add to Cart</button>
         </div>
       </div>
 
       <!-- Full-width description -->
       <div class="md:col-span-2 border-t pt-4 mt-6">
         <h3 class="font-semibold mb-2 text-gray-700">Description:</h3>
-        <p
-          class="w-full border rounded p-2 mb-4"
-          rows="4"
-          placeholder="Product details here..."
-        >
-          The guitar is a fretted, stringed musical instrument typically made of
-          wood, with six strings stretched over a flat or slightly curved body.
-          It consists of three main parts: the body, which amplifies the sound;
-          the neck, which houses the fingerboard or fretboard; and the
-          headstock, which contains the tuning pegs. Guitars can be acoustic,
-          which use a hollow body to naturally amplify sound, or electric, which
-          rely on pickups and electronic amplification. The strings are usually
-          tuned to the notes E-A-D-G-B-E (from lowest to highest pitch), though
-          variations exist. Commonly used in genres like rock, blues, classical,
-          jazz, and folk, the guitar is a versatile instrument played by
-          strumming, plucking, or fingerpicking.
+        <p class="w-full border rounded p-2 mb-4" rows="4" placeholder="Product details here...">
+          The guitar is a fretted, stringed musical instrument typically made of wood, with six strings stretched over a
+          flat or slightly curved body. It consists of three main parts: the body, which amplifies the sound; the neck,
+          which houses the fingerboard or fretboard; and the headstock, which contains the tuning pegs. Guitars can be
+          acoustic, which use a hollow body to naturally amplify sound, or electric, which rely on pickups and
+          electronic amplification. The strings are usually tuned to the notes E-A-D-G-B-E (from lowest to highest
+          pitch), though variations exist. Commonly used in genres like rock, blues, classical, jazz, and folk, the
+          guitar is a versatile instrument played by strumming, plucking, or fingerpicking.
         </p>
       </div>
     </main>
 
-    <footer
-      class="bg-black w-full h-10 bottom-0 flex items-center justify-center"
-    >
+    <footer class="bg-black w-full h-10 fixed bottom-0 flex items-center justify-center">
       <p class="text-white">Made by Peter & Darius</p>
     </footer>
   </body>

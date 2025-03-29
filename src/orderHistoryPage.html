@@ -7,6 +7,7 @@
     <title>Document</title>
   </head>
   <body class="w-screen h-screen flex flex-col">
+    <!-- HEADER -->
     <header>
       <nav class="bg-outline h-20 flex items-center font-bold px-4 sm:px-10 justify-between">
         <div class="flex gap-4 sm:gap-6 items-center">
@@ -57,10 +58,13 @@
         </div>
       </nav>
     </header>
+
+    <!-- MAIN CONTAINER -->
     <main class="w-full h-full overflow-scroll">
       <div
-        class="grid w-full absolute left-0 top-20 gap-4 grid-rows-4 grid-cols-1 sm:grid-rows-2 sm:grid-cols-4 lg:grid-cols-5"
+        class="grid w-full absolute left-0 top-24 gap-4 pb-14 grid-rows-4 grid-cols-1 sm:grid-rows-2 sm:grid-cols-4 lg:grid-cols-5"
       >
+        <!-- LEFT CONTAINER -->
         <div
           class="row-span-1 col-span-1 sm:row-span-1 sm:col-span-1 sm:row-start-1 sm:col-start-1 lg:row-span-1 lg:col-span-1 bg-outline rounded-md m-4"
         >
@@ -70,10 +74,14 @@
             <button class="bg-primary text-white h-10 w-40 px-10 rounded-md">Log Out</button>
           </article>
         </div>
+
+        <!-- RIGHT CONTAINER -->
         <div
           class="row-span-3 col-span-1 row-start-2 sm:col-span-3 sm:row-span-2 sm:row-start-1 sm:col-start-2 lg:row-span-2 lg:row-start-1 lg:col-start-2 lg:col-span-4 rounded-md border-1 border-outline flex flex-col"
         >
           <p class="w-full text-xl px-8 py-2 font-bold text-[#DC443C]">Order History</p>
+
+          <!-- ORDER LIST -->
           <div class="h-full center border border-outline rounded-md sm:m-4 mt-0 relative">
             <table class="w-full">
               <thead>
@@ -86,6 +94,7 @@
                 </tr>
               </thead>
               <tbody class="text-center">
+                <!-- ONE ORDER  -->
                 <tr class="border border-outline h-12">
                   <td>12345</td>
                   <td>1x Guitar, 2x Amps</td>
@@ -99,6 +108,8 @@
                     <a href="">View Order</a>
                   </td>
                 </tr>
+
+                <!-- ONE ORDER  -->
                 <tr class="border border-outline h-12">
                   <td>12345</td>
                   <td>1x Guitar, 2x Amps</td>
@@ -112,6 +123,8 @@
                     <a href="">View Order</a>
                   </td>
                 </tr>
+
+                <!-- ONE ORDER  -->
                 <tr class="border border-outline h-12">
                   <td>12345</td>
                   <td>1x Guitar, 2x Amps</td>
@@ -125,6 +138,8 @@
                     <a href="">View Order</a>
                   </td>
                 </tr>
+
+                <!-- ONE ORDER  -->
                 <tr class="border border-outline h-12">
                   <td>12345</td>
                   <td>1x Guitar, 2x Amps</td>
@@ -138,6 +153,8 @@
                     <a href="">View Order</a>
                   </td>
                 </tr>
+
+                <!-- ONE ORDER  -->
                 <tr class="border border-outline h-12">
                   <td>12345</td>
                   <td>1x Guitar, 2x Amps</td>
@@ -151,6 +168,8 @@
                     <a href="">View Order</a>
                   </td>
                 </tr>
+
+                <!-- ONE ORDER  -->
                 <tr class="border border-outline h-12">
                   <td>12345</td>
                   <td>1x Guitar, 2x Amps</td>
@@ -164,6 +183,8 @@
                     <a href="">View Order</a>
                   </td>
                 </tr>
+
+                <!-- ONE ORDER  -->
                 <tr class="border border-outline h-12">
                   <td>12345</td>
                   <td>1x Guitar, 2x Amps</td>
@@ -177,6 +198,8 @@
                     <a href="">View Order</a>
                   </td>
                 </tr>
+
+                <!-- ONE ORDER  -->
                 <tr class="border border-outline h-12">
                   <td>12345</td>
                   <td>1x Guitar, 2x Amps</td>
@@ -190,6 +213,8 @@
                     <a href="">View Order</a>
                   </td>
                 </tr>
+
+                <!-- ONE ORDER  -->
                 <tr class="border border-outline h-12">
                   <td>12345</td>
                   <td>1x Guitar, 2x Amps</td>
@@ -203,6 +228,8 @@
                     <a href="">View Order</a>
                   </td>
                 </tr>
+
+                <!-- ONE ORDER  -->
                 <tr class="border border-outline h-12">
                   <td>12345</td>
                   <td>1x Guitar, 2x Amps</td>
@@ -218,6 +245,8 @@
                 </tr>
               </tbody>
             </table>
+
+            <!-- PAGINATOR -->
             <div class="w-full h-10 flex justify-center">
               <nav class="w-full h-full">
                 <ul class="w-full h-full flex gap-2 items-center justify-center lg:justify-end px-10 font-bold">
@@ -234,8 +263,9 @@
           </div>
         </div>
       </div>
-      <!-- </article> -->
     </main>
+
+    <!-- FOOTER -->
     <footer class="bg-black w-full h-10 fixed bottom-0 flex items-center justify-center">
       <p class="text-white">Made by Peter & Darius</p>
     </footer>

@@ -11,17 +11,19 @@
       <nav class="bg-outline h-20 flex items-center font-bold px-4 sm:px-10 justify-between">
         <div class="flex sm:gap-6 items-center">
           <div class="w-20 h-20">
-            <img src="../public/Logo.png" alt="StringShop logo" />
+            <a href="landingPage.html" class="cursor-pointer">
+              <img src="../public/Logo.png" alt="StringShop logo" />
+            </a>
           </div>
           <div class="flex gap-4 sm:gap-10">
-            <a href="">Guitars</a>
-            <a href="">Basses</a>
-            <a href="">Amps</a>
+            <a href="productsGuitars.html">Guitars</a>
+            <a href="productsBasses.html">Basses</a>
+            <a href="productsAmps.html">Amps</a>
           </div>
         </div>
 
         <div class="flex gap-4 sm:gap-10">
-          <a href="">
+          <a href="userPage.html">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -38,7 +40,7 @@
             </svg>
           </a>
 
-          <a href="">
+          <a href="cartFallback.html">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -57,27 +59,28 @@
         </div>
       </nav>
     </header>
+
     <main class="container mx-auto px-4 grid grid-cols-1 md:grid-cols-[2fr_1fr] gap-x-12 mt-8 md:gap-x-5 pb-14">
       <!-- Images section -->
       <div class="grid grid-cols-5 grid-rows-4 mb-5 gap-2">
         <!-- Thumbnails -->
         <div
-          class="lg:w-32 lg:h-32 lg:border lg:border-red-500 md:w-20 md:h-20 md:border md:border-amber-500 sm:w-24 sm:h-full sm:border sm:border-green-500 w-full h-full col-start-1 row-start-1"
+          class="lg:w-32 lg:h-32 lg:border lg:border-primary md:w-20 md:h-20 md:border md:border-amber-500 sm:w-24 sm:h-full sm:border sm:border-green-500 w-full h-full col-start-1 row-start-1"
         >
           <img src="..\assets\guitars\guitar_placeholder.webp" alt="thumb1" class="object-cover" />
         </div>
         <div
-          class="lg:w-32 lg:h-32 lg:border lg:border-red-500 md:w-20 md:h-20 md:border md:border-amber-500 sm:w-24 sm:h-full sm:border sm:border-green-500 w-full h-full col-start-1 row-start-2"
+          class="lg:w-32 lg:h-32 lg:border lg:border-primary md:w-20 md:h-20 md:border md:border-amber-500 sm:w-24 sm:h-full sm:border sm:border-green-500 w-full h-full col-start-1 row-start-2"
         >
           <img src="..\assets\guitars\guitar_placeholder.webp" alt="thumb2" class="object-cover" />
         </div>
         <div
-          class="lg:w-32 lg:h-32 lg:border lg:border-red-500 md:w-20 md:h-20 md:border md:border-amber-500 sm:w-24 sm:h-full sm:border sm:border-green-500 h-full col-start-1 row-start-3"
+          class="lg:w-32 lg:h-32 lg:border lg:border-primary md:w-20 md:h-20 md:border md:border-amber-500 sm:w-24 sm:h-full sm:border sm:border-green-500 h-full col-start-1 row-start-3"
         >
           <img src="..\assets\guitars\guitar_placeholder.webp" alt="thumb3" class="object-cover" />
         </div>
         <div
-          class="lg:w-32 lg:h-32 lg:border lg:border-red-500 md:w-20 md:h-20 md:border md:border-amber-500 sm:w-24 sm:h-full sm:border sm:border-green-500 h-full col-start-1 row-start-4"
+          class="lg:w-32 lg:h-32 lg:border lg:border-primary md:w-20 md:h-20 md:border md:border-amber-500 sm:w-24 sm:h-full sm:border sm:border-green-500 h-full col-start-1 row-start-4"
         >
           <img src="..\assets\guitars\guitar_placeholder.webp" alt="thumb4" class="object-cover" />
         </div>
@@ -99,8 +102,8 @@
           <p class="font-semibold mb-1">Color:</p>
           <div class="space-y-1 accent-primary">
             <label class="flex items-center space-x-2">
-              <input type="radio" name="color" checked class="text-red-600" />
-              <span class="text-red-600 font-medium">Crimson red</span>
+              <input type="radio" name="color" checked class="text-primary" />
+              <span class="text-primary font-medium">Crimson red</span>
             </label>
             <label class="flex items-center space-x-2">
               <input type="radio" name="color" class="text-blue-600" />
@@ -116,13 +119,15 @@
         <!-- Price and stock -->
         <div class="mb-2">
           <p class="text-sm text-green-600">In stock</p>
-          <p class="text-red-600 font-bold text-xl">600 €</p>
+          <p class="text-primary font-bold text-xl">600 €</p>
         </div>
 
         <!-- Quantity & Button -->
         <div class="flex items-center space-x-4">
           <input type="number" value="1" min="1" max="100" step="1" class="border rounded p-1" />
-          <button class="bg-red-500 hover:bg-red-600 text-white px-4 py-2 rounded">Add to Cart</button>
+          <a href="cart.html">
+            <button class="bg-primary hover:bg-primary text-white px-4 py-2 rounded">Add to Cart</button>
+          </a>
         </div>
       </div>
 

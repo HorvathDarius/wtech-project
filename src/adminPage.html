@@ -12,17 +12,19 @@
       <nav class="bg-outline h-20 flex items-center font-bold px-4 sm:px-10 justify-between">
         <div class="flex sm:gap-6 items-center">
           <div class="w-20 h-20">
-            <img src="../public/Logo.png" alt="StringShop logo" />
+            <a href="landingPage.html" class="cursor-pointer">
+              <img src="../public/Logo.png" alt="StringShop logo" />
+            </a>
           </div>
           <div class="flex gap-4 sm:gap-10">
-            <a href="">Guitars</a>
-            <a href="">Basses</a>
-            <a href="">Amps</a>
+            <a href="productsGuitars.html">Guitars</a>
+            <a href="productsBasses.html">Basses</a>
+            <a href="productsAmps.html">Amps</a>
           </div>
         </div>
 
         <div class="flex gap-4 sm:gap-10">
-          <a href="">
+          <a href="userPage.html">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -39,7 +41,7 @@
             </svg>
           </a>
 
-          <a href="">
+          <a href="cartFallback.html">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -58,15 +60,18 @@
         </div>
       </nav>
     </header>
+
     <!-- MAIN CONTAINER -->
     <main class="w-full h-full overflow-scroll">
       <div class="grid w-full absolute left-0 top-20 gap-4 p-4 grid-rows-1 grid-cols-1 pb-14">
         <div class="w-full rounded-md border-1 border-outline flex flex-col">
           <div class="w-full flex justify-between items-center pt-2 px-4">
             <p class="w-full text-lg sm:text-xl px-8 py-2 font-bold text-[#DC443C]">Products</p>
-            <button class="bg-primary text-sm sm:text-lg text-white h-10 w-80 px-10 rounded-md cursor-pointer">
-              Add Product
-            </button>
+            <a href="addProduct.html" class="h-10 w-80">
+              <button class="bg-primary text-sm sm:text-lg text-white w-full h-full px-10 rounded-md cursor-pointer">
+                Add Product
+              </button>
+            </a>
           </div>
 
           <!-- PRODUCTS LIST CONTAINER -->
@@ -100,7 +105,11 @@
                 </p>
 
                 <div class="flex flex-col gap-4">
-                  <button class="bg-primary text-white h-10 w-48 px-10 rounded-md cursor-pointer">Edit Product</button>
+                  <a href="editProduct.html">
+                    <button class="bg-primary text-white h-10 w-48 px-10 rounded-md cursor-pointer">
+                      Edit Product
+                    </button>
+                  </a>
                   <button class="text-primary border border-primary h-10 w-48 px-10 rounded-md cursor-pointer">
                     Delete Product
                   </button>
@@ -130,7 +139,11 @@
                   stretched over a flat or slightly curved body...
                 </p>
                 <div class="flex flex-col gap-4">
-                  <button class="bg-primary text-white h-10 w-48 px-10 rounded-md cursor-pointer">Edit Product</button>
+                  <a href="editProduct.html">
+                    <button class="bg-primary text-white h-10 w-48 px-10 rounded-md cursor-pointer">
+                      Edit Product
+                    </button>
+                  </a>
                   <button class="text-primary border border-primary h-10 w-48 px-10 rounded-md cursor-pointer">
                     Delete Product
                   </button>
@@ -160,7 +173,11 @@
                   stretched over a flat or slightly curved body...
                 </p>
                 <div class="flex flex-col gap-4">
-                  <button class="bg-primary text-white h-10 w-48 px-10 rounded-md cursor-pointer">Edit Product</button>
+                  <a href="editProduct.html">
+                    <button class="bg-primary text-white h-10 w-48 px-10 rounded-md cursor-pointer">
+                      Edit Product
+                    </button>
+                  </a>
                   <button class="text-primary border border-primary h-10 w-48 px-10 rounded-md cursor-pointer">
                     Delete Product
                   </button>

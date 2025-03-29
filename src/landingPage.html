@@ -11,17 +11,19 @@
       <nav class="bg-outline h-20 flex items-center font-bold px-4 sm:px-10 justify-between">
         <div class="flex sm:gap-6 items-center">
           <div class="w-20 h-20">
-            <img src="../public/Logo.png" alt="StringShop logo" />
+            <a href="landingPage.html" class="cursor-pointer">
+              <img src="../public/Logo.png" alt="StringShop logo" />
+            </a>
           </div>
           <div class="flex gap-4 sm:gap-10">
-            <a href="">Guitars</a>
-            <a href="">Basses</a>
-            <a href="">Amps</a>
+            <a href="productsGuitars.html">Guitars</a>
+            <a href="productsBasses.html">Basses</a>
+            <a href="productsAmps.html">Amps</a>
           </div>
         </div>
 
         <div class="flex gap-4 sm:gap-10">
-          <a href="">
+          <a href="userPage.html">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -38,7 +40,7 @@
             </svg>
           </a>
 
-          <a href="">
+          <a href="cartFallback.html">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -57,6 +59,7 @@
         </div>
       </nav>
     </header>
+
     <main class="pb-14">
       <!-- Banner section -->
       <div class="relative h-150 overflow-hidden py-8">
@@ -71,17 +74,19 @@
             class="text-right space-y-4 md:-translate-y-16 md:-translate-x-4 transform translate-y-50 -translate-x-4"
           >
             <h1 class="text-black text-sm md:text-5xl font-bold">New limited time offer</h1>
-            <button
-              class="bg-red-500 hover:bg-red-600 text-white text-sm md:text-lg md:px-6 px-1 py-1 rounded-md cursor-pointer"
-            >
-              Learn More
-            </button>
+            <a href="product_page.html">
+              <button
+                class="bg-primary hover:bg-red-600 text-white text-sm md:text-lg md:px-6 px-1 py-1 rounded-md cursor-pointer"
+              >
+                Learn More
+              </button>
+            </a>
           </div>
         </div>
       </div>
 
       <!-- Popular products -->
-      <div class="w-full bg-red-500 py-2 px-4">
+      <div class="w-full bg-primary py-2 px-4">
         <h2 class="text-white font-bold text-sm">Popular Products</h2>
       </div>
 
@@ -89,7 +94,7 @@
         class="container mx-auto py-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 2xl:grid-cols-6 gap-y-10 place-items-center"
       >
         <!-- Single Product Card -->
-        <div class="block border rounded shadow overflow-hidden w-60 col-span-1">
+        <a href="product_page.html" class="block border rounded shadow overflow-hidden w-60 col-span-1 cursor-pointer">
           <div class="relative h-64 flex items-center justify-center">
             <img src="..\assets\guitars\guitar_placeholder.webp" alt="thumb1" class="object-cover" />
           </div>
@@ -101,9 +106,9 @@
               <button class="text-xl">🛒</button>
             </div>
           </div>
-        </div>
+        </a>
         <!-- Single Product Card -->
-        <div class="hidden sm:block border rounded shadow overflow-hidden w-60 col-span-1">
+        <a href="product_page.html" class="block border rounded shadow overflow-hidden w-60 col-span-1 cursor-pointer">
           <div class="relative h-64 flex items-center justify-center">
             <img src="..\assets\guitars\guitar_placeholder.webp" alt="thumb1" class="object-cover" />
           </div>
@@ -115,9 +120,9 @@
               <button class="text-xl">🛒</button>
             </div>
           </div>
-        </div>
+        </a>
         <!-- Single Product Card -->
-        <div class="hidden md:block border rounded shadow overflow-hidden w-60 col-span-1">
+        <a href="product_page.html" class="block border rounded shadow overflow-hidden w-60 col-span-1 cursor-pointer">
           <div class="relative h-64 flex items-center justify-center">
             <img src="..\assets\guitars\guitar_placeholder.webp" alt="thumb1" class="object-cover" />
           </div>
@@ -129,9 +134,9 @@
               <button class="text-xl">🛒</button>
             </div>
           </div>
-        </div>
+        </a>
         <!-- Single Product Card -->
-        <div class="hidden lg:block border rounded shadow overflow-hidden w-60 col-span-1">
+        <a href="product_page.html" class="block border rounded shadow overflow-hidden w-60 col-span-1 cursor-pointer">
           <div class="relative h-64 flex items-center justify-center">
             <img src="..\assets\guitars\guitar_placeholder.webp" alt="thumb1" class="object-cover" />
           </div>
@@ -143,9 +148,9 @@
               <button class="text-xl">🛒</button>
             </div>
           </div>
-        </div>
+        </a>
         <!-- Single Product Card -->
-        <div class="hidden 2xl:block border rounded shadow overflow-hidden w-60 col-span-1">
+        <a href="product_page.html" class="hidden 2xl:block border rounded shadow overflow-hidden w-60 col-span-1">
           <div class="relative h-64 flex items-center justify-center">
             <img src="..\assets\guitars\guitar_placeholder.webp" alt="thumb1" class="object-cover" />
           </div>
@@ -157,9 +162,9 @@
               <button class="text-xl">🛒</button>
             </div>
           </div>
-        </div>
+        </a>
         <!-- Single Product Card -->
-        <div class="hidden 2xl:block border rounded shadow overflow-hidden w-60 col-span-1">
+        <a href="product_page.html" class="hidden 2xl:block border rounded shadow overflow-hidden w-60 col-span-1">
           <div class="relative h-64 flex items-center justify-center">
             <img src="..\assets\guitars\guitar_placeholder.webp" alt="thumb1" class="object-cover" />
           </div>
@@ -171,26 +176,28 @@
               <button class="text-xl">🛒</button>
             </div>
           </div>
-        </div>
+        </a>
 
         <!-- View All button -->
         <div class="col-span-full flex justify-center">
-          <button
-            class="bg-red-500 hover:bg-red-600 text-white text-sm md:text-lg md:px-6 px-4 py-2 rounded-md cursor-pointer"
-          >
-            View All
-          </button>
+          <a href="productsGuitars.html">
+            <button
+              class="bg-primary hover:bg-red-600 text-white text-sm md:text-lg md:px-6 px-4 py-2 rounded-md cursor-pointer"
+            >
+              View All
+            </button>
+          </a>
         </div>
       </div>
       <!-- Products on sale -->
-      <div class="w-full bg-red-500 py-2 px-4">
+      <div class="w-full bg-primary py-2 px-4">
         <h2 class="text-white font-bold text-sm">Products on sale</h2>
       </div>
       <div
         class="container mx-auto py-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 2xl:grid-cols-6 gap-y-10 place-items-center"
       >
         <!-- Single Product Card -->
-        <div class="block border rounded shadow overflow-hidden w-60 col-span-1">
+        <a href="product_page.html" class="block border rounded shadow overflow-hidden w-60 col-span-1">
           <div class="relative h-64 flex items-center justify-center">
             <img src="..\assets\guitars\guitar_placeholder.webp" alt="thumb1" class="object-cover" />
           </div>
@@ -202,9 +209,9 @@
               <button class="text-xl">🛒</button>
             </div>
           </div>
-        </div>
+        </a>
         <!-- Single Product Card -->
-        <div class="hidden sm:block border rounded shadow overflow-hidden w-60 col-span-1">
+        <a href="product_page.html" class="block border rounded shadow overflow-hidden w-60 col-span-1 cursor-pointer">
           <div class="relative h-64 flex items-center justify-center">
             <img src="..\assets\guitars\guitar_placeholder.webp" alt="thumb1" class="object-cover" />
           </div>
@@ -216,9 +223,9 @@
               <button class="text-xl">🛒</button>
             </div>
           </div>
-        </div>
+        </a>
         <!-- Single Product Card -->
-        <div class="hidden md:block border rounded shadow overflow-hidden w-60 col-span-1">
+        <a href="product_page.html" class="hidden md:block border rounded shadow overflow-hidden w-60 col-span-1">
           <div class="relative h-64 flex items-center justify-center">
             <img src="..\assets\guitars\guitar_placeholder.webp" alt="thumb1" class="object-cover" />
           </div>
@@ -230,9 +237,9 @@
               <button class="text-xl">🛒</button>
             </div>
           </div>
-        </div>
+        </a>
         <!-- Single Product Card -->
-        <div class="hidden lg:block border rounded shadow overflow-hidden w-60 col-span-1">
+        <a href="product_page.html" class="hidden lg:block border rounded shadow overflow-hidden w-60 col-span-1">
           <div class="relative h-64 flex items-center justify-center">
             <img src="..\assets\guitars\guitar_placeholder.webp" alt="thumb1" class="object-cover" />
           </div>
@@ -244,9 +251,9 @@
               <button class="text-xl">🛒</button>
             </div>
           </div>
-        </div>
+        </a>
         <!-- Single Product Card -->
-        <div class="hidden 2xl:block border rounded shadow overflow-hidden w-60 col-span-1">
+        <a href="product_page.html" class="hidden 2xl:block border rounded shadow overflow-hidden w-60 col-span-1">
           <div class="relative h-64 flex items-center justify-center">
             <img src="..\assets\guitars\guitar_placeholder.webp" alt="thumb1" class="object-cover" />
           </div>
@@ -258,9 +265,9 @@
               <button class="text-xl">🛒</button>
             </div>
           </div>
-        </div>
+        </a>
         <!-- Single Product Card -->
-        <div class="hidden 2xl:block border rounded shadow overflow-hidden w-60 col-span-1">
+        <a href="product_page.html" class="hidden 2xl:block border rounded shadow overflow-hidden w-60 col-span-1">
           <div class="relative h-64 flex items-center justify-center">
             <img src="..\assets\guitars\guitar_placeholder.webp" alt="thumb1" class="object-cover" />
           </div>
@@ -272,15 +279,17 @@
               <button class="text-xl">🛒</button>
             </div>
           </div>
-        </div>
+        </a>
 
         <!-- View All button -->
         <div class="col-span-full flex justify-center">
-          <button
-            class="bg-red-500 hover:bg-red-600 text-white text-sm md:text-lg md:px-6 px-4 py-2 rounded-md cursor-pointer"
-          >
-            View All
-          </button>
+          <a href="productsBasses.html">
+            <button
+              class="bg-primary hover:bg-red-600 text-white text-sm md:text-lg md:px-6 px-4 py-2 rounded-md cursor-pointer"
+            >
+              View All
+            </button>
+          </a>
         </div>
       </div>
 

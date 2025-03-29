@@ -12,17 +12,19 @@
       <nav class="bg-outline h-20 flex items-center font-bold px-4 sm:px-10 justify-between">
         <div class="flex sm:gap-6 items-center">
           <div class="w-20 h-20">
-            <img src="../public/Logo.png" alt="StringShop logo" />
+            <a href="landingPage.html" class="cursor-pointer">
+              <img src="../public/Logo.png" alt="StringShop logo" />
+            </a>
           </div>
           <div class="flex gap-4 sm:gap-10">
-            <a href="">Guitars</a>
-            <a href="">Basses</a>
-            <a href="">Amps</a>
+            <a href="productsGuitars.html">Guitars</a>
+            <a href="productsBasses.html">Basses</a>
+            <a href="productsAmps.html">Amps</a>
           </div>
         </div>
 
         <div class="flex gap-4 sm:gap-10">
-          <a href="">
+          <a href="userPage.html">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -39,7 +41,7 @@
             </svg>
           </a>
 
-          <a href="">
+          <a href="cartFallback.html">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -64,7 +66,7 @@
       <div class="grid w-full absolute left-0 top-20 p-4 grid-rows-1 grid-cols-1">
         <div class="w-full rounded-md border-1 border-outline flex flex-col">
           <p class="w-full text-xl px-8 py-2 font-bold text-primary">Editing Product</p>
-          <form action="/api/v1/add-product" method="post">
+          <form action="adminPage.html" method="post">
             <div
               class="center border border-outline rounded-md sm:m-4 sm:mt-0 relative grid grid-rows-12 grid-cols-1 lg:grid-rows-6 lg:grid-cols-3"
             >
@@ -160,16 +162,19 @@
                 class="row-span-2 w-full row-start-11 lg:row-span-1 lg:row-start-6 lg:col-span-3 flex flex-col sm:flex-row sm:justify-between items-center px-8"
               >
                 <div class="p-4">
-                  <button class="text-primary border border-primary h-10 w-48 px-10 rounded-md cursor-pointer">
-                    Go back
-                  </button>
+                  <a href="adminPage.html">
+                    <button
+                      class="text-primary border border-primary h-10 w-48 px-10 rounded-md cursor-pointer"
+                      type="button"
+                    >
+                      Go back
+                    </button>
+                  </a>
                 </div>
                 <div class="flex flex-col md:flex-row gap-4">
                   <button
-                    type="submit"
-                    formaction="/api/v1/delete-product"
-                    formmethod="delete"
                     class="text-primary border border-primary h-10 w-48 px-10 rounded-md cursor-pointer"
+                    type="button"
                   >
                     Delete Product
                   </button>

@@ -60,37 +60,43 @@
     </header>
 
     <!-- MAIN CONTAINER -->
-    <main class="w-full h-full">
-      <section class="flex justify-center">
-        <section class="flex flex-col items-center p-2 gap-4">
-          <!-- LOGO -->
-          <div class="w-30 h-30">
-            <img src="../public/Logo.png" alt="StringShop logo" />
+    <main class="w-full h-full overflow-scroll">
+      <div class="w-full h-full flex items-center justify-center">
+        <div
+          class="border border-outline rounded-md w-auto h-auto flex flex-col items-center justify-center gap-4 p-4 sm:p-10"
+        >
+          <svg
+            width="140px"
+            height="140px"
+            viewBox="0 0 24.00 24.00"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            stroke="#37ff00"
+            class="my-10"
+          >
+            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+            <g id="SVGRepo_iconCarrier">
+              <circle cx="12" cy="12" r="10" stroke="#37b82e" stroke-width="1.5"></circle>
+              <path
+                d="M8.5 12.5L10.5 14.5L15.5 9.5"
+                stroke="#37b82e"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ></path>
+            </g>
+          </svg>
+          <p class="text-xl font-bold text-primary">Your order was placed successfully</p>
+          <p class="text-lg">Your order will be delivered soon!</p>
+          <div class="flex flex-col gap-4">
+            <button class="bg-primary text-white h-10 w-60 px-10 rounded-md cursor-pointer">See Order</button>
+            <button class="text-white bg-primary h-10 w-60 px-10 rounded-md cursor-pointer">Continue Shopping</button>
           </div>
-          <div class="flex flex-col">
-            <h1 class="w-full h-10 text-center">Welcome to StringShop</h1>
-            <h2 class="font-bold">SIGN IN WITH YOUR EMAIL ADDRESS</h2>
-          </div>
-
-          <!-- LOGIN FORM -->
-          <form action="/login" method="post" class="flex flex-col gap-8">
-            <div class="flex flex-col gap-2">
-              <label for="email">E-mail <span class="text-red-600">*</span></label>
-              <input id="email" name="email" type="text" class="w-80 h-10 bg-gray-200 rounded-sm" required />
-              <label for="password">Password <span class="text-red-600">*</span></label>
-              <input id="password" name="password" type="password" class="w-80 h-10 bg-gray-200 rounded-sm" required />
-            </div>
-            <button type="submit" class="bg-primary w-80 h-10 rounded-md text-white cursor-pointer">Sign in</button>
-          </form>
-          <p>
-            Don't have an account?
-            <span class="font-bold text-primary">
-              <a href=""> Sign up now </a>
-            </span>
-          </p>
-        </section>
-      </section>
+        </div>
+      </div>
     </main>
+
     <!-- FOOTER -->
     <footer class="bg-black w-full h-10 fixed bottom-0 flex items-center justify-center">
       <p class="text-white">Made by Peter & Darius</p>

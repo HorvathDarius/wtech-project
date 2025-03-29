@@ -8,10 +8,8 @@
   </head>
   <body class="w-screen h-screen grid grid-rows-[auto_1fr_auto]">
     <header>
-      <nav
-        class="bg-[#E3DDDD] h-20 flex items-center font-bold px-4 sm:px-10 justify-between"
-      >
-        <div class="flex gap-4 sm:gap-6 items-center">
+      <nav class="bg-outline h-20 flex items-center font-bold px-4 sm:px-10 justify-between">
+        <div class="flex sm:gap-6 items-center">
           <div class="w-20 h-20">
             <img src="../public/Logo.png" alt="StringShop logo" />
           </div>
@@ -59,8 +57,7 @@
         </div>
       </nav>
     </header>
-    <main>
-
+    <main class="pb-14">
       <!-- Banner section -->
       <div class="relative h-50 overflow-hidden">
         <img
@@ -77,30 +74,32 @@
 
       <!-- Search bar -->
       <div class="container mx-auto px-25 py-4">
-        <input type="text" placeholder="🔍Search..." class="bg-gray-200 w-full p-2 border rounded shadow-inner focus:outline-none focus:ring-2 focus:ring-blue-400">
+        <input
+          type="text"
+          placeholder="🔍Search..."
+          class="bg-gray-200 w-full p-2 border rounded shadow-inner focus:outline-none focus:ring-2 focus:ring-blue-400"
+        />
       </div>
 
       <!-- Filters and Sort -->
-      <div class="container mx-auto px-25 grid grid-cols-1 md:grid-cols-[3fr_1fr] gap-0">
-
+      <div class="container mx-auto px-20 grid grid-cols-1 md:grid-cols-[3fr_1fr] gap-0">
         <!-- Filters -->
-        <div class="bg-white border p-4 rounded shadow">
+        <div class="bg-white border rounded shadow">
           <div class="bg-red-500 text-white px-4 py-2 rounded-t font-bold mb-4 text-center">Filters</div>
-          <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-
+          <form class="grid grid-cols-1 md:grid-cols-3 gap-4 p-4">
             <!-- Color -->
             <div>
               <h4 class="font-semibold mb-2">Color</h4>
               <label class="flex items-center space-x-2">
-                <input type="checkbox" checked class="accent-red-500">
+                <input type="checkbox" checked class="accent-red-500" />
                 <span>Crimson Red</span>
               </label>
               <label class="flex items-center space-x-2">
-                <input type="checkbox" class="accent-red-500">
+                <input type="checkbox" class="accent-red-500" />
                 <span>Blueish Blue</span>
               </label>
               <label class="flex items-center space-x-2">
-                <input type="checkbox" class="accent-red-500">
+                <input type="checkbox" class="accent-red-500" />
                 <span>Pitch Black</span>
               </label>
             </div>
@@ -109,11 +108,11 @@
             <div>
               <h4 class="font-semibold mb-2">Type</h4>
               <label class="flex items-center space-x-2">
-                <input type="checkbox" class="accent-red-500">
+                <input type="checkbox" class="accent-red-500" />
                 <span>Electric</span>
               </label>
               <label class="flex items-center space-x-2">
-                <input type="checkbox" class="accent-red-500">
+                <input type="checkbox" class="accent-red-500" />
                 <span>Acoustic</span>
               </label>
             </div>
@@ -122,50 +121,54 @@
             <div>
               <h4 class="font-semibold mb-2">Price</h4>
               <label class="flex items-center space-x-2">
-                <input type="checkbox" class="accent-red-500">
+                <input type="checkbox" class="accent-red-500" />
                 <span>0€ - 250€</span>
               </label>
               <label class="flex items-center space-x-2">
-                <input type="checkbox" class="accent-red-500">
+                <input type="checkbox" class="accent-red-500" />
                 <span>250€ - 500€</span>
               </label>
               <label class="flex items-center space-x-2">
-                <input type="checkbox" class="accent-red-500">
+                <input type="checkbox" class="accent-red-500" />
                 <span>500€ +</span>
               </label>
             </div>
-          </div>
-          <button class="mt-4 bg-red-500 text-white px-4 py-2 rounded ml-auto block">Show Results</button>
+            <button class="bg-red-500 text-white px-4 py-2 rounded-md cursor-pointer sm:col-start-3">
+              Show Results
+            </button>
+          </form>
         </div>
 
         <!-- Sort -->
-        <div class="space-x-2 px-2">
-            <form class="max-w-sm mx-auto ">
-                <select id="sortables" class="mt-4 bg-red-500 text-white px-4 py-2 text-sm rounded-lg focus:ring-red-500 focus:border-red-500 block w-full p-2.5">
-                  <option selected>Sort</option>
-                  <option value="Lowest-price">Lowest Price</option>
-                  <option value="Highest-Price">Highest Price</option>
-                  <option value="Product-Name-A-Z">Product Name A- Z</option>
-                  <option value="Product-Name-Z-A">Product Name  Z - A</option>
-                </select>
+        <div class="px-2">
+          <form>
+            <select
+              id="sortables"
+              class="w-full mt-4 sm:mt-0 bg-red-500 text-white px-4 py-2 text-sm rounded-md focusw-full cursor-pointer"
+            >
+              <!-- <option selected>Sort</option> -->
+              <option value="Lowest-Price">Lowest Price</option>
+              <option value="Highest-Price">Highest Price</option>
+              <option value="Product-Name-A-Z">Product Name A- Z</option>
+              <option value="Product-Name-Z-A">Product Name Z - A</option>
+            </select>
+          </form>
         </div>
       </div>
 
       <!-- Product Grid -->
-      <div class="container mx-auto py-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 2xl:grid-cols-6 gap-y-10 place-items-center">
+      <div
+        class="container mx-auto py-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 2xl:grid-cols-6 gap-y-10 place-items-center"
+      >
         <!-- Single Product Card -->
         <div class="border rounded shadow overflow-hidden w-60 col-span-1">
           <div class="relative h-64 flex items-center justify-center">
-            <img
-                src="..\assets\basses\bassPlaceholder.webp"
-                alt="thumb1"
-                class="object-cover"
-              />
+            <img src="..\assets\basses\bassPlaceholder.webp" alt="thumb1" class="object-cover" />
           </div>
-          <div class="p-4 col-span-1">
+          <div class="p-4">
             <h3 class="font-bold text-l">Product name</h3>
             <p class="text-sm">599 €</p>
-            <p class="text-sm text-gray-600 ">3 colors</p>
+            <p class="text-sm text-gray-600">3 colors</p>
             <div class="flex justify-end mt-2">
               <button class="text-xl">🛒</button>
             </div>
@@ -175,16 +178,12 @@
         <!-- Single Product Card -->
         <div class="border rounded shadow overflow-hidden w-60 col-span-1">
           <div class="relative h-64 flex items-center justify-center">
-            <img
-                src="..\assets\basses\bassPlaceholder.webp"
-                alt="thumb1"
-                class="object-cover"
-              />
+            <img src="..\assets\basses\bassPlaceholder.webp" alt="thumb1" class="object-cover" />
           </div>
-          <div class="p-4 col-span-1">
+          <div class="p-4">
             <h3 class="font-bold text-l">Product name</h3>
             <p class="text-sm">599 €</p>
-            <p class="text-sm text-gray-600 ">3 colors</p>
+            <p class="text-sm text-gray-600">3 colors</p>
             <div class="flex justify-end mt-2">
               <button class="text-xl">🛒</button>
             </div>
@@ -194,16 +193,12 @@
         <!-- Single Product Card -->
         <div class="border rounded shadow overflow-hidden w-60 col-span-1">
           <div class="relative h-64 flex items-center justify-center">
-            <img
-                src="..\assets\basses\bassPlaceholder.webp"
-                alt="thumb1"
-                class="object-cover"
-              />
+            <img src="..\assets\basses\bassPlaceholder.webp" alt="thumb1" class="object-cover" />
           </div>
-          <div class="p-4 col-span-1">
+          <div class="p-4">
             <h3 class="font-bold text-l">Product name</h3>
             <p class="text-sm">599 €</p>
-            <p class="text-sm text-gray-600 ">3 colors</p>
+            <p class="text-sm text-gray-600">3 colors</p>
             <div class="flex justify-end mt-2">
               <button class="text-xl">🛒</button>
             </div>
@@ -213,16 +208,12 @@
         <!-- Single Product Card -->
         <div class="border rounded shadow overflow-hidden w-60 col-span-1">
           <div class="relative h-64 flex items-center justify-center">
-            <img
-                src="..\assets\basses\bassPlaceholder.webp"
-                alt="thumb1"
-                class="object-cover"
-              />
+            <img src="..\assets\basses\bassPlaceholder.webp" alt="thumb1" class="object-cover" />
           </div>
-          <div class="p-4 col-span-1">
+          <div class="p-4">
             <h3 class="font-bold text-l">Product name</h3>
             <p class="text-sm">599 €</p>
-            <p class="text-sm text-gray-600 ">3 colors</p>
+            <p class="text-sm text-gray-600">3 colors</p>
             <div class="flex justify-end mt-2">
               <button class="text-xl">🛒</button>
             </div>
@@ -232,16 +223,12 @@
         <!-- Single Product Card -->
         <div class="border rounded shadow overflow-hidden w-60 col-span-1">
           <div class="relative h-64 flex items-center justify-center">
-            <img
-                src="..\assets\basses\bassPlaceholder.webp"
-                alt="thumb1"
-                class="object-cover"
-              />
+            <img src="..\assets\basses\bassPlaceholder.webp" alt="thumb1" class="object-cover" />
           </div>
-          <div class="p-4 col-span-1">
+          <div class="p-4">
             <h3 class="font-bold text-l">Product name</h3>
             <p class="text-sm">599 €</p>
-            <p class="text-sm text-gray-600 ">3 colors</p>
+            <p class="text-sm text-gray-600">3 colors</p>
             <div class="flex justify-end mt-2">
               <button class="text-xl">🛒</button>
             </div>
@@ -251,16 +238,12 @@
         <!-- Single Product Card -->
         <div class="border rounded shadow overflow-hidden w-60 col-span-1">
           <div class="relative h-64 flex items-center justify-center">
-            <img
-                src="..\assets\basses\bassPlaceholder.webp"
-                alt="thumb1"
-                class="object-cover"
-              />
+            <img src="..\assets\basses\bassPlaceholder.webp" alt="thumb1" class="object-cover" />
           </div>
-          <div class="p-4 col-span-1">
+          <div class="p-4">
             <h3 class="font-bold text-l">Product name</h3>
             <p class="text-sm">599 €</p>
-            <p class="text-sm text-gray-600 ">3 colors</p>
+            <p class="text-sm text-gray-600">3 colors</p>
             <div class="flex justify-end mt-2">
               <button class="text-xl">🛒</button>
             </div>
@@ -270,16 +253,12 @@
         <!-- Single Product Card -->
         <div class="border rounded shadow overflow-hidden w-60 col-span-1">
           <div class="relative h-64 flex items-center justify-center">
-            <img
-                src="..\assets\basses\bassPlaceholder.webp"
-                alt="thumb1"
-                class="object-cover"
-              />
+            <img src="..\assets\basses\bassPlaceholder.webp" alt="thumb1" class="object-cover" />
           </div>
-          <div class="p-4 col-span-1">
+          <div class="p-4">
             <h3 class="font-bold text-l">Product name</h3>
             <p class="text-sm">599 €</p>
-            <p class="text-sm text-gray-600 ">3 colors</p>
+            <p class="text-sm text-gray-600">3 colors</p>
             <div class="flex justify-end mt-2">
               <button class="text-xl">🛒</button>
             </div>
@@ -289,16 +268,12 @@
         <!-- Single Product Card -->
         <div class="border rounded shadow overflow-hidden w-60 col-span-1">
           <div class="relative h-64 flex items-center justify-center">
-            <img
-                src="..\assets\basses\bassPlaceholder.webp"
-                alt="thumb1"
-                class="object-cover"
-              />
+            <img src="..\assets\basses\bassPlaceholder.webp" alt="thumb1" class="object-cover" />
           </div>
-          <div class="p-4 col-span-1">
+          <div class="p-4">
             <h3 class="font-bold text-l">Product name</h3>
             <p class="text-sm">599 €</p>
-            <p class="text-sm text-gray-600 ">3 colors</p>
+            <p class="text-sm text-gray-600">3 colors</p>
             <div class="flex justify-end mt-2">
               <button class="text-xl">🛒</button>
             </div>
@@ -308,16 +283,12 @@
         <!-- Single Product Card -->
         <div class="border rounded shadow overflow-hidden w-60 col-span-1">
           <div class="relative h-64 flex items-center justify-center">
-            <img
-                src="..\assets\basses\bassPlaceholder.webp"
-                alt="thumb1"
-                class="object-cover"
-              />
+            <img src="..\assets\basses\bassPlaceholder.webp" alt="thumb1" class="object-cover" />
           </div>
-          <div class="p-4 col-span-1">
+          <div class="p-4">
             <h3 class="font-bold text-lg">Product name</h3>
             <p class="text-sm">599 €</p>
-            <p class="text-sm text-gray-600 ">3 colors</p>
+            <p class="text-sm text-gray-600">3 colors</p>
             <div class="flex justify-end mt-2">
               <button class="text-xl">🛒</button>
             </div>
@@ -327,35 +298,12 @@
         <!-- Single Product Card -->
         <div class="border rounded shadow overflow-hidden w-60 col-span-1">
           <div class="relative h-64 flex items-center justify-center">
-            <img
-                src="..\assets\basses\bassPlaceholder.webp"
-                alt="thumb1"
-                class="object-cover"
-              />
+            <img src="..\assets\basses\bassPlaceholder.webp" alt="thumb1" class="object-cover" />
           </div>
-          <div class="p-4 col-span-1">
+          <div class="p-4">
             <h3 class="font-bold text-lg">Product name</h3>
             <p class="text-sm">599 €</p>
-            <p class="text-sm text-gray-600 ">3 colors</p>
-            <div class="flex justify-end mt-2">
-              <button class="text-xl">🛒</button>
-            </div>
-          </div>
-        </div>
-        
-        <!-- Single Product Card -->
-        <div class="border rounded shadow overflow-hidden w-60 col-span-1">
-          <div class="relative h-64 flex items-center justify-center">
-            <img
-                src="..\assets\basses\bassPlaceholder.webp"
-                alt="thumb1"
-                class="object-cover"
-              />
-          </div>
-          <div class="p-4 col-span-1">
-            <h3 class="font-bold text-lg">Product name</h3>
-            <p class="text-sm">599 €</p>
-            <p class="text-sm text-gray-600 ">3 colors</p>
+            <p class="text-sm text-gray-600">3 colors</p>
             <div class="flex justify-end mt-2">
               <button class="text-xl">🛒</button>
             </div>
@@ -365,16 +313,27 @@
         <!-- Single Product Card -->
         <div class="border rounded shadow overflow-hidden w-60 col-span-1">
           <div class="relative h-64 flex items-center justify-center">
-            <img
-                src="..\assets\basses\bassPlaceholder.webp"
-                alt="thumb1"
-                class="object-cover"
-              />
+            <img src="..\assets\basses\bassPlaceholder.webp" alt="thumb1" class="object-cover" />
           </div>
-          <div class="p-4 col-span-1">
+          <div class="p-4">
+            <h3 class="font-bold text-lg">Product name</h3>
+            <p class="text-sm">599 €</p>
+            <p class="text-sm text-gray-600">3 colors</p>
+            <div class="flex justify-end mt-2">
+              <button class="text-xl">🛒</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Single Product Card -->
+        <div class="border rounded shadow overflow-hidden w-60 col-span-1">
+          <div class="relative h-64 flex items-center justify-center">
+            <img src="..\assets\basses\bassPlaceholder.webp" alt="thumb1" class="object-cover" />
+          </div>
+          <div class="p-4">
             <h3 class="font-bold text-l">Product name</h3>
             <p class="text-sm">599 €</p>
-            <p class="text-sm text-gray-600 ">3 colors</p>
+            <p class="text-sm text-gray-600">3 colors</p>
             <div class="flex justify-end mt-2">
               <button class="text-xl">🛒</button>
             </div>
@@ -397,10 +356,8 @@
       </div>
     </main>
 
-    <footer
-      class="bg-black w-full h-10 bottom-0 flex items-center justify-center"
-    >
-      <p class="text-white">Made by Peter & Gitarius</p>
+    <footer class="bg-black w-full h-10 fixed bottom-0 flex items-center justify-center">
+      <p class="text-white">Made by Peter & Darius</p>
     </footer>
   </body>
 </html>

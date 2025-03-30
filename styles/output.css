@@ -22,6 +22,7 @@
     --color-gray-200: oklch(0.928 0.006 264.531);
     --color-gray-300: oklch(0.872 0.01 258.338);
     --color-gray-400: oklch(0.707 0.022 261.325);
+    --color-gray-500: oklch(0.551 0.027 264.364);
     --color-gray-600: oklch(0.446 0.03 256.802);
     --color-gray-700: oklch(0.373 0.034 259.733);
     --color-stone-200: oklch(0.923 0.003 48.717);
@@ -742,14 +743,8 @@
   .border-primary {
     border-color: var(--color-primary);
   }
-  .border-red-500 {
-    border-color: var(--color-red-500);
-  }
   .border-red-600 {
     border-color: var(--color-red-600);
-  }
-  .bg-\[\#E3DDDD\] {
-    background-color: #E3DDDD;
   }
   .bg-black {
     background-color: var(--color-black);
@@ -918,6 +913,9 @@
   .text-blue-600 {
     color: var(--color-blue-600);
   }
+  .text-gray-500 {
+    color: var(--color-gray-500);
+  }
   .text-gray-600 {
     color: var(--color-gray-600);
   }
@@ -933,11 +931,11 @@
   .text-orange-500 {
     color: var(--color-orange-500);
   }
+  .text-outline {
+    color: var(--color-outline);
+  }
   .text-primary {
     color: var(--color-primary);
-  }
-  .text-red-500 {
-    color: var(--color-red-500);
   }
   .text-red-600 {
     color: var(--color-red-600);
@@ -947,9 +945,6 @@
   }
   .accent-primary {
     accent-color: var(--color-primary);
-  }
-  .accent-red-500 {
-    accent-color: var(--color-red-500);
   }
   .shadow {
     --tw-shadow: 0 1px 3px 0 var(--tw-shadow-color, rgb(0 0 0 / 0.1)), 0 1px 2px -1px var(--tw-shadow-color, rgb(0 0 0 / 0.1));
@@ -1527,12 +1522,6 @@
       height: calc(var(--spacing) * 100);
     }
   }
-  .lg\:size-150 {
-    @media (width >= 64rem) {
-      width: calc(var(--spacing) * 150);
-      height: calc(var(--spacing) * 150);
-    }
-  }
   .lg\:h-32 {
     @media (width >= 64rem) {
       height: calc(var(--spacing) * 32);
@@ -1637,11 +1626,6 @@
   .lg\:border-primary {
     @media (width >= 64rem) {
       border-color: var(--color-primary);
-    }
-  }
-  .lg\:border-red-500 {
-    @media (width >= 64rem) {
-      border-color: var(--color-red-500);
     }
   }
   .lg\:p-8 {
